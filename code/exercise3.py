@@ -21,8 +21,8 @@ for i in range(int(simulation_time / sampling_period)):
 for i in range(int(simulation_time / sampling_period)):
     Sout[i] = numpy.sin(2 * numpy.pi * Fc * St[i] + Mi * numpy.sin(2 * numpy.pi * Fm * St[i] - numpy.pi / 2))
 
-fourier = numpy.fft.fft(Sm)
-dm = numpy.fft.fftfreq(Sm.size, d=sampling_period)
+# fourier = numpy.fft.fft(Sm)
+# dm = numpy.fft.fftfreq(Sm.size, d=sampling_period)
 
 pl.figure(1)
 pl.subplot(311)
@@ -32,7 +32,7 @@ pl.plot(St, Sc)
 pl.subplot(313)
 pl.plot(St, Sout)
 
-pl.figure(2)
-pl.plot(St,dm)
+# pl.figure(2)
+# pl.plot(St,dm)
 
 pl.show()
