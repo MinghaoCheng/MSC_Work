@@ -18,6 +18,7 @@ for i in range(int(simulation_time / sampling_period)):
     Sm[i] = numpy.sin(2 * numpy.pi * Fm * St[i])
     Sc[i] = numpy.sin(2 * numpy.pi * Fc * St[i])
 
+# sin(2*pi*Fc*t + Mi*sin(2*pi*Fm*t))
 for i in range(int(simulation_time / sampling_period)):
     Sout[i] = numpy.sin(2 * numpy.pi * Fc * St[i] + Mi * numpy.sin(2 * numpy.pi * Fm * St[i] - numpy.pi / 2))
 
