@@ -1,58 +1,38 @@
-import math
 import matplotlib
 import matplotlib.pyplot as pl
 import numpy
 
-Fm = 2      #base frequency
-Fc = 20     #carrier frequency
+Fm = 2                                                                              #base signal frequency
+Fc = 100                                                                            #carrier frequency
+Mi = 40                                                                             #Modulation index
 
-number_of_samples = 1000
+sampling_period = 0.0001
+simulation_time = 1
 
-Swm = []    #base radian sequence
-Swc = []    #carrier radian sequence
+Sm = numpy.zeros(int(simulation_time / sampling_period), dtype=float)               #base signal sequence
+Sc = numpy.zeros(int(simulation_time / sampling_period), dtype=float)               #carrier sequence
+Sout = numpy.zeros(int(simulation_time / sampling_period), dtype=float)             #output signal sequence
+St = numpy.arange(0,simulation_time,sampling_period, dtype=float)                   #time sequence
 
-Sm = []     #base sequence
-Sc = []     #carrier sequence
-St = []     #time sequence
-Sout = []   #output sequence
+for i in range(int(simulation_time / sampling_period)):
+    Sm[i] = numpy.sin(2 * numpy.pi * Fm * St[i])
+    Sc[i] = numpy.sin(2 * numpy.pi * Fc * St[i])
 
-number_of_samples_fm = number_of_samples / Fm
-number_of_samples_fc = number_of_samples / Fc
+for i in range(int(simulation_time / sampling_period)):
+    Sout[i] = numpy.sin(2 * numpy.pi * Fc * St[i] + Mi * numpy.sin(2 * numpy.pi * Fm * St[i] - numpy.pi / 2))
 
-Swm = numpy.empty([number_of_samples])
-Swc = numpy.empty([number_of_samples]) 
-Sm = numpy.empty([number_of_samples])
-Sc = numpy.empty([number_of_samples])
-St = numpy.empty([number_of_samples])
-Sout = numpy.empty([number_of_samples])
-
-
-step = 2 * math.pi / (number_of_samples_fm)
-for i in range(Fm):
-    for j in range(int(number_of_samples_fm)):
-        Swm[j + int(i*number_of_samples_fm)] = j * step
-
-step = 2 * math.pi / (number_of_samples_fc)
-for i in range(Fc):
-    for j in range(int(number_of_samples_fc)):
-        Swc[j + int(i*number_of_samples_fc)] = j * step
-
-St = numpy.arange(0, 1, 1/number_of_samples)
-
-for i in range(number_of_samples):
-    Sm[i] = math.sin(Swm[i])
-    Sc[i] = math.sin(Swc[i])
-
-for i in range(number_of_samples):
-    Sout[i] = math.cos(Swc[i] + (Fc - Fm) / Fm * math.sin(Swm[i]))
+fourier = numpy.fft.fft(Sm)
+dm = numpy.fft.fftfreq(Sm.size, d=sampling_period)
 
 pl.figure(1)
-pl.subplot(211)
-pl.plot(St, Sc)
-pl.subplot(212)
+pl.subplot(311)
 pl.plot(St, Sm)
+pl.subplot(312)
+pl.plot(St, Sc)
+pl.subplot(313)
+pl.plot(St, Sout)
 
 pl.figure(2)
-pl.plot(St, Sout)
+pl.plot(St,dm)
 
 pl.show()
