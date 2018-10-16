@@ -45,10 +45,10 @@ def FIR_lp(N, stop_freq):
 
 def main():
 
-    sampling_freq = 10000
+    sampling_freq = 1000
     cut_off_freq = 55
     
-    h = FIR_hp_ifft(201, 2 * np.pi * cut_off_freq / sampling_freq )
+    h = FIR_hp_ifft(101, 2 * np.pi * cut_off_freq / sampling_freq )
 
     t = np.arange(0, 1, 1/sampling_freq)
     freq_arr = np.arange(0, sampling_freq >> 1, 1)
@@ -57,15 +57,21 @@ def main():
     x = np.sin(2*np.pi*50*t) + np.sin(2*np.pi*60*t)
     
     xsp = abs(np.fft.fft(x))[0:sampling_freq >> 1]
+
     plt.figure(1)
+    plt.subplot(2, 1, 1)
     plt.plot(freq_arr,xsp)
 
 
     y = sig.lfilter(h, 1, x)
     ysp = abs(np.fft.fft(y))[0:sampling_freq >> 1]
-    plt.figure(2)
+    plt.subplot(2, 1, 2)
     plt.plot(freq_arr,ysp)
 
+    plt.figure(2)
+    w = np.linspace(0, 2 * np.pi, 1000)
+    w, z = sig.freqz(h, 1, w)
+    plt.plot(w, abs(z))
 
     plt.show()
 
