@@ -5,29 +5,30 @@ import scipy.signal as sig
 
 def FIR_lp_ifft(N, stop_freq):
 
-    w = np.linspace(0, 2 * np.pi, N)
+    w = np.linspace(0, 2 * np.pi - 2 * np.pi / N, N)
+    
     hwj = np.zeros(N)
 
     for i in range(len(w)):
         if (w[i] <= stop_freq) or (w[i] >= 2 * np.pi - stop_freq):
             hwj[i] = 1
 
-    ph = (N / 2 + 1) * w
+    ph = int(N / 2) * w
 
     h = np.real(np.fft.ifft(hwj * np.exp( - 1j * ph)))
-    
+
     return h
 
 def FIR_hp_ifft(N, stop_freq):
 
-    w = np.linspace(0, 2 * np.pi, N)
+    w = np.linspace(0, 2 * np.pi - 2 * np.pi / N, N)
     hwj = np.zeros(N)
 
     for i in range(len(w)):
         if (w[i] >= stop_freq) and (w[i] <= 2 * np.pi - stop_freq):
             hwj[i] = 1
 
-    ph = (N / 2 + 1) * w
+    ph = int(N / 2) * w
 
     h = np.real(np.fft.ifft(hwj * np.exp( - 1j * ph)))
     
@@ -46,15 +47,14 @@ def FIR_lp(N, stop_freq):
 def main():
 
     sampling_freq = 1000
-    cut_off_freq = 55
+    cut_off_freq = 100
     
-    h = FIR_hp_ifft(101, 2 * np.pi * cut_off_freq / sampling_freq )
+    h = FIR_hp_ifft(151, 2 * np.pi * cut_off_freq / sampling_freq)
 
     t = np.arange(0, 1, 1/sampling_freq)
     freq_arr = np.arange(0, sampling_freq >> 1, 1)
     
-    
-    x = np.sin(2*np.pi*50*t) + np.sin(2*np.pi*60*t)
+    x = np.sin(2*np.pi*50*t) + np.sin(2*np.pi*120*t)
     
     xsp = abs(np.fft.fft(x))[0:sampling_freq >> 1]
 
@@ -69,9 +69,9 @@ def main():
     plt.plot(freq_arr,ysp)
 
     plt.figure(2)
-    w = np.linspace(0, 2 * np.pi, 1000)
+    w = np.linspace(0, 2 * np.pi, 151)
     w, z = sig.freqz(h, 1, w)
-    plt.plot(w, abs(z))
+    plt.plot(np.abs(z))
 
     plt.show()
 
