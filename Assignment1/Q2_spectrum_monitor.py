@@ -94,18 +94,17 @@ class UI:
         sp_yaxis = pg.AxisItem(orientation='left')
         sp_xaxis = pg.AxisItem(orientation='bottom')
         sp_xaxis.setTicks([sp_xlabels])
-
+        
+        win.setBackground('w')
         waveform = win.addPlot(title='Time domain', row=1, col=1, axisItems={'bottom': wf_xaxis, 'left': wf_yaxis},)
         spectrum = win.addPlot(title='Frequency domain', row=2, col=1, axisItems={'bottom': sp_xaxis, 'left': sp_yaxis},)
 
-        self.wv_curve = waveform.plot(pen = 'c')
-        self.sp_curve = spectrum.plot(pen = 'r')  
+        self.wv_curve = waveform.plot(pen = 'r')
+        self.sp_curve = spectrum.plot(pen = 'b')  
 
         waveform.plot(pen = 'c', width = 3)
         waveform.setYRange(0, Data_max_value<<1, padding=0)
         waveform.setXRange(0, Chunk, padding=0.005)
-
-        
 
         spectrum.setYRange(0, 1, padding=0)
         # spectrum.setXRange(0, SamplingRate / 2, padding=0.005)

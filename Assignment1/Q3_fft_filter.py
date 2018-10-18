@@ -28,10 +28,6 @@ def filter(data_in, sampling_rate, start_freq, stop_freq, gain):
     # allocate the frequency array
     freq_array = np.linspace(0 , sampling_rate >> 1, len(fft) >> 1)
 
-    # mirror the frequency array
-    # for i in range(len(freq_array)):
-    #     freq_array = np.append(freq_array, freq_array[(len(fft) >> 1) - i - 1])
-
     # gain the data with specified frequency
     for i in range(len(freq_array)):
         if(freq_array[i]>start_freq and freq_array[i]<stop_freq):

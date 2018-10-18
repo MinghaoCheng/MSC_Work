@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 import struct
 
 """
-    define a class of voice detector
+    define a class of speech detector
 """
-class voice_detector:
+class speech_detector:
     
     """
         initialise function
@@ -19,7 +19,7 @@ class voice_detector:
         self.Channel = 1
         self.DataFormat = pyaudio.paInt16
         self.DataMax = 32768
-        self.Samples_per_frame = 1024           # 43.06640625ms per frame, (44100 / 1024), to make the fft faster, also known as the length of the window
+        self.Samples_per_frame = 1024           # 23.21995ms per frame, (1024 / 44100), to make the fft faster, also known as the length of the window
 
         # allocate frequency array
         self.fft_frequency = np.linspace(0, self.SamplingRate >> 1, self.Samples_per_frame >> 1)
@@ -122,16 +122,16 @@ class voice_detector:
 """
 def main():
 
-    # implement voice detector and threshold
-    vd = voice_detector()
+    # implement speech detector and threshold
+    vd = speech_detector()
     threshold = 0.35 * vd.DataMax
 
-    # raw_data is used to store the raw data from pyaudio input voice stream, and shorts is used to store the unpacked voice data (in int16)
+    # raw_data is used to store the raw data from pyaudio input audio stream, and shorts is used to store the unpacked voice data (in int16)
     raw_data = []
     shorts = []
     format = "%dh"%(vd.Samples_per_frame)
 
-    # open the voice stream
+    # open the audio stream
     audio_handler = pyaudio.PyAudio()
     stream = audio_handler.open(format = vd.DataFormat,
                     channels = vd.Channel,
@@ -148,19 +148,19 @@ def main():
             raw_data = []
             shorts = []
             # print("start recording")
-            # read 0.05s and see if the voice is still greater than threshold
-            chunks_remaining = np.ceil(vd.SamplingRate / vd.Samples_per_frame * 0.05 )
+            # read 2 chunks and see if the voice is still greater than threshold
+            chunks_remaining = 2
             while(chunks_remaining >= 0):
                 raw_data.append(stream.read(vd.Samples_per_frame))
                 shorts.append(struct.unpack(format, raw_data[len(raw_data) - 1]))
                 chunks_remaining -= 1
                 if(max(shorts[len(shorts) - 1]) > threshold):
-                    chunks_remaining += np.ceil(vd.SamplingRate / vd.Samples_per_frame * 0.05 )
+                    chunks_remaining += 2
             # print("recording done")
             # the volume is less than threshold, which indicates the speech is over
             wave = np.array(shorts, dtype = np.int16).flatten()
-            # see if the length of the sound is greater than 0.3s, if not, it is a short noise, otherwise, hand the data over to voice detector
-            if(len(wave) >= 0.3 * vd.SamplingRate):
+            # see if the length of the sound is greater than 0.2s, if not, it is a short noise, otherwise, hand the data over to voice detector
+            if(len(wave) >= 0.2 * vd.SamplingRate):
                 vd.detect(wave)
 
 if __name__ == "__main__":
