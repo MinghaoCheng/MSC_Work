@@ -99,8 +99,8 @@ def main():
     x = np.sin(2 * np.pi * 10 * t) + np.sin(2 * np.pi * 50 * t) + np.sin(2 * np.pi * 100 * t)
 
     h = fir.Lowpass(501, 15)
-    y = sig.lfilter(h, 1, x)
-    # y = convolve(h, x)[0:len(x)]
+    # y = sig.lfilter(h, 1, x)
+    y = convolve(h, x)[0:len(x)]
 
     plt.plot(y)
     plt.show()
