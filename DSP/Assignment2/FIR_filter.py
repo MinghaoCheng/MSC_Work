@@ -85,7 +85,7 @@ def convolve(input1, input2):
 
     for i in range(len(input1) + len(input2)):
         for j in range(len(input2)):
-            output[i] += input2[j] * input1_prime[i - j - 1]
+            output[i] += input2[j] * input1_prime[i - j]
 
     return output
 
