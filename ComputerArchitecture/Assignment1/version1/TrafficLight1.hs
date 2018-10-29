@@ -30,17 +30,18 @@ trafficLight reset = (green, amber, red)
         red = mux1 reset state2 zero
 
         th0 = and4 (inv s0) (inv s1) (inv s2) (inv s3)      --0000
-        th1 = and4 (inv s0) (inv s1) s2 s3                  --0011
-        th2 = and4 (inv s0) s1 (inv s2) (inv s3)            --0100
-        th3 = and4 s0 (inv s1) (inv s2) (inv s3)            --1000
+        th1 = and4 (inv s0) (inv s1) s2 (inv s3)            --0010
+        th2 = and4 (inv s0) (inv s1) s2 s3                  --0011
+        th3 = and4 (inv s0) s1 s2 s3                        --0111
+        th4 = and4 s0 (inv s1) (inv s2) (inv s3)            --1000
 
-        state0 = reg1 (or2 th0 th1)
-                        th0
-        state1 = reg1 (or2 th1 th2)
+        state0 = reg1 (or3 th4 th1 reset)
+                        (or2 th0 th4)
+        state1 = reg1 (or3 th1 th2 reset)
                         th1
-        state2 = reg1 (or2 th2 th3)
+        state2 = reg1 (or3 th2 th3 reset)
                         th2
-        state3 = reg1 (or2 th3 th0)
+        state3 = reg1 (or3 th3 th4 reset)
                         th3
 
         [s0, s1, s2, s3] = incrementor4 reset [one, zero, zero, zero]
