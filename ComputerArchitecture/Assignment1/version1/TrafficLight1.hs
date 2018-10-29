@@ -35,7 +35,7 @@ trafficLight reset = (green, amber, red)
         th3 = and4 s0 (inv s1) (inv s2) (inv s3)            --1000
 
         state0 = reg1 (or2 th0 th1)
-                        (and2 th0 (inv reset))
+                        th0
         state1 = reg1 (or2 th1 th2)
                         th1
         state2 = reg1 (or2 th2 th3)
