@@ -36,7 +36,7 @@ def FIR_hp_ifft(N, stop_freq):
 
 def FIR_lp(N, stop_freq):
 
-    n = np.arange(-N/2, N/2 +1)
+    n = np.arange(int(-N/2), int(N/2 +1))
 
     h = 1/(n * np.pi) * np.sin(stop_freq *n)
 
@@ -49,29 +49,12 @@ def main():
     sampling_freq = 1000
     cut_off_freq = 100
     
-    h = FIR_lp_ifft(50, 2 * np.pi * cut_off_freq / sampling_freq)
+    b = FIR_lp(401, 2 * np.pi * cut_off_freq / sampling_freq) * np.hamming(401)
 
-    t = np.arange(0, 1, 1/sampling_freq)
-    freq_arr = np.arange(0, sampling_freq >> 1, 1)
-    
-    x = np.sin(2*np.pi*50*t) + np.sin(2*np.pi*120*t)
-    
-    xsp = abs(np.fft.fft(x))[0:sampling_freq >> 1]
+    f = sig.firwin(401, 100, pass_zero = True, fs = 1000 , window = 'hamming')
 
-    plt.figure(1)
-    plt.subplot(2, 1, 1)
-    plt.plot(freq_arr,xsp)
-
-
-    y = sig.lfilter(h, 1, x)
-    ysp = abs(np.fft.fft(y))[0:sampling_freq >> 1]
-    plt.subplot(2, 1, 2)
-    plt.plot(freq_arr,ysp)
-
-    plt.figure(2)
-    w = np.linspace(0, 2 * np.pi, 50)
-    w, z = sig.freqz(h, 1, w)
-    plt.plot(np.abs(z))
+    plt.plot(b)
+    plt.plot(f)
 
     plt.show()
 
