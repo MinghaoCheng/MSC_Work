@@ -3,7 +3,6 @@ from ecg_filter import fir_filter
 import matplotlib.pyplot as plt
 import numpy as np
 
-
 class matched_filter:
     def __init__(self, template):
         self.__coefficient = template[::-1]
@@ -54,6 +53,7 @@ def main():
     # filter the data
     for i in range (len(ch0)):
         matched_ch0.append(matched.lfilter.fir_c_lib.dofilter(ch0_filtered[i]))
+    matched.lfilter.fir_c_lib.reset_buffer()
 
     # square the data
     matched_ch0 = np.array(matched_ch0)
