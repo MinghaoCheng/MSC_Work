@@ -8,7 +8,37 @@ class matched_filter:
         self.__coefficient = template[::-1]
         self.lfilter = fir_lfilter(self.__coefficient)
 
+    def filter(self, data_in):
+        output = self.lfilter.fir_c_lib.dofilter(data_in)
+        output = output ** 2
+        return output
+
+    
+class heart_rate_detector:
+    def __init__(self, samping_rate):
+        self.__fs = samping_rate
+        self.__buffer = 0
+        self.__counter = 0
+        self.__hr_buffer = 0
+
+    def calculate(self, data_in):
+        if (data_in == 1 and self.__buffer == 0):
+            output =  60 * self.__fs / self.__counter
+            self.__counter = 0
+            if(output < 40 or output > 200):
+                output = self.__hr_buffer
+            else:
+                self.__hr_buffer = output
+        else:
+            output = self.__hr_buffer
+        self.__counter += 1
+        self.__buffer = data_in
+        return output
+        
+
 def main():
+    fs = 1000
+
     # load template
     template_file = open("template", mode = 'r')
     for line in template_file:
@@ -39,55 +69,50 @@ def main():
     ecg.close()
 
     # filter the original data
-    fir = fir_filter(sampling_frequency = 1000, cutoff_frequency = [1,45,55], pass_zero = False, window = 'hamming')
+    fir = fir_filter(sampling_frequency = fs, cutoff_frequency = [1,45,55], pass_zero = False, window = 'hamming')
 
     ch0_filtered = []
     for i in range(len(ch0)):
         ch0_filtered.append(fir.lfilter.fir_c_lib.dofilter(ch0[i]))
     fir.lfilter.fir_c_lib.reset_all()
-    
-    # implement matched filter
+
+    # implement matched filter and heart rate decector
     matched = matched_filter(template)
-    matched_ch0 = []
+    hr_calculator = heart_rate_detector(fs)
 
-    # filter the data
+    ch0_matched = []
+    ch0_threshold = []
+    heart_rate = []
+
+    # filter the data and calculate heart rate
     for i in range (len(ch0)):
-        matched_ch0.append(matched.lfilter.fir_c_lib.dofilter(ch0_filtered[i]))
-    matched.lfilter.fir_c_lib.reset_buffer()
+        temp = matched.filter(ch0_filtered[i])
+        ch0_matched.append(temp)
+        if temp >= 0.7:
+            temp = 1
+        else:
+            temp = 0
+        ch0_threshold.append(temp)
+        heart_rate.append(hr_calculator.calculate(temp))
 
-    # square the data
-    matched_ch0 = np.array(matched_ch0)
-    for i in range (len(matched_ch0)):
-        matched_ch0[i] = matched_ch0[i] ** 2
+    matched.lfilter.fir_c_lib.reset_all()
 
     plt.figure(1)
-    plt.plot(time, matched_ch0)
-
-    # apply threshold
-    for i in range (len(matched_ch0)):
-        if matched_ch0[i] >= 0.7:
-            matched_ch0[i] = 1
-        else:
-            matched_ch0[i] = 0
+    plt.plot(time, ch0_filtered)
+    plt.xlabel("time s")
+    plt.ylabel("magnitude")
     plt.figure(2)
-    plt.plot(time, matched_ch0)
-
-    # generate heart rate
-    heart_rate = np.zeros(len(time))
-    p = 0
-    for i in range (1, len(matched_ch0)):
-        if (matched_ch0[i] == 1 and matched_ch0[i - 1] == 0):
-            if(p != 0):
-                heart_rate[i] =  60000 / (i - p)
-            p = i
-            if(heart_rate[i] < 40 and heart_rate[i] >200):
-                heart_rate[i] = heart_rate[i - 1]
-        else:
-            heart_rate[i] =  heart_rate[i - 1]
-        
-    # plot time vs heart rate
+    plt.plot(time, ch0_matched)
+    plt.xlabel("time s")
+    plt.ylabel("magnitude")
     plt.figure(3)
+    plt.plot(time, ch0_threshold)
+    plt.xlabel("time s")
+    plt.ylabel("magnitude")
+    plt.figure(4)
     plt.plot(time, heart_rate)
+    plt.xlabel("time s")
+    plt.ylabel("heart rate bpm")
     plt.show()
 
 if __name__ == "__main__":
