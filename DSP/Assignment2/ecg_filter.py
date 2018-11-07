@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 import scipy.signal as sig
 import ctypes
 
+#for linux
+import os
+
 class fir_lfilter:
 
     def __init__(self, coefficients):
@@ -13,7 +16,10 @@ class fir_lfilter:
         self.__pointer = 0
 
         # import c lfilter
-        self.fir_c_lib = ctypes.windll.LoadLibrary("DSP_FIR.dll")
+            # for windows
+        # self.fir_c_lib = ctypes.CDLL.LoadLibrary("DSP_FIR.dll")
+            # for linux
+        self.fir_c_lib = ctypes.CDLL(os.path.abspath("DSP_FIR.so"))
         self.fir_c_lib.dofilter.restype = ctypes.c_float
         self.fir_c_lib.dofilter.argtypes = [ctypes.c_float]
 
