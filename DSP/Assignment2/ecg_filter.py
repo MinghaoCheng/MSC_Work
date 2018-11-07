@@ -4,7 +4,7 @@ import scipy.signal as sig
 import ctypes
 
 # for linux
-# import os
+import os
 
 class fir_lfilter:
 
@@ -17,9 +17,9 @@ class fir_lfilter:
 
         # import c lfilter
             # for windows
-        self.fir_c_lib = ctypes.windll.LoadLibrary("DSP_FIR.dll")
+        # self.fir_c_lib = ctypes.windll.LoadLibrary("DSP_FIR.dll")
             # for linux
-        # self.fir_c_lib = ctypes.CDLL(os.path.abspath("DSP_FIR.so"))
+        self.fir_c_lib = ctypes.CDLL(os.path.abspath("DSP_FIR.so"))
         self.fir_c_lib.dofilter.restype = ctypes.c_float
         self.fir_c_lib.dofilter.argtypes = [ctypes.c_float]
 
