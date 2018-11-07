@@ -24,10 +24,10 @@ class heart_rate_detector:
     def calculate(self, data_in):
         if (data_in == 1 and self.__buffer == 0):
             output =  60 * self.__fs / self.__counter
-            self.__counter = 0
             if(output < 40 or output > 200):
                 output = self.__hr_buffer
             else:
+                self.__counter = 0
                 self.__hr_buffer = output
         else:
             output = self.__hr_buffer
@@ -40,7 +40,7 @@ def main():
     fs = 1000
 
     # load template
-    template_file = open("template", mode = 'r')
+    template_file = open("template.dat", mode = 'r')
     for line in template_file:
         temp = line.split()
     template = []
@@ -48,7 +48,7 @@ def main():
         template.append(float(temp[i]))
     
     # load ecg
-    ecg = open("2359434c.dat", mode = 'r')
+    ecg = open("2293577c_c.dat", mode = 'r')
 
     time = []
     ch0 = []
@@ -88,7 +88,7 @@ def main():
     for i in range (len(ch0)):
         temp = matched.filter(ch0_filtered[i])
         ch0_matched.append(temp)
-        if temp >= 0.7:
+        if temp >= 0.3:
             temp = 1
         else:
             temp = 0
