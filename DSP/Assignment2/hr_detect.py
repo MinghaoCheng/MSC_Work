@@ -48,7 +48,7 @@ def main():
         template.append(float(temp[i]))
     
     # load ecg
-    ecg = open("2293577c_c.dat", mode = 'r')
+    ecg = open("2293577c.dat", mode = 'r')
 
     time = []
     ch0 = []
