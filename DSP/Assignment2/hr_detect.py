@@ -48,7 +48,7 @@ def main():
         template.append(float(temp[i]))
     
     # load ecg
-    ecg = open("2293577c.dat", mode = 'r')
+    ecg = open("ecg_2.dat", mode = 'r')
 
     time = []
     ch0 = []
@@ -113,6 +113,7 @@ def main():
     plt.plot(time, heart_rate)
     plt.xlabel("time s")
     plt.ylabel("heart rate bpm")
+    # plt.plot(template)
     plt.show()
 
 if __name__ == "__main__":

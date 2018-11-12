@@ -71,12 +71,12 @@ class fir_filter:
         return ntabs
 
     def __firwin(self, cutoff_frequency, pass_zero, window):
-
+        # define the normalised radian
         w0 = np.linspace(0, 2 * np.pi - 2 * np.pi / self.__tabs, self.__tabs)
         normalised_cutoff_radian = np.array(cutoff_frequency) * np.pi / self.__nyq
         hwj = np.zeros(self.__tabs)
+        # calculate the frequency response
         for i in range(len(normalised_cutoff_radian)):
-
             if (i == 0):
                 for j in range(len(w0)):
                     if (w0[j] <= normalised_cutoff_radian[i] or w0[j] >= 2 * np.pi - normalised_cutoff_radian[i]):
@@ -101,9 +101,9 @@ class fir_filter:
                     hwj[i] = 1
                 else:
                     hwj[i] = 0
-
+        # introduce the phase to shift the filter to positive
         ph = int(self.__tabs / 2) * w0
-
+        # do the ifft to get the impulse response in time domain
         h = np.fft.ifft(hwj * np.exp( -1j * ph))
         h = np.real(h) * sig.get_window(window, self.__tabs)
 
@@ -113,7 +113,7 @@ def main():
 
     # read ECG file
     # ecg = open("2293577c.dat", mode = 'r')
-    ecg = open("2359434c.dat", mode = 'r')
+    ecg = open("ecg_1.dat", mode = 'r')
 
     time = []
     ch0 = []
