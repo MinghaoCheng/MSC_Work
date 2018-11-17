@@ -1,0 +1,1859 @@
+
+Sigma16_M1 simulation
+........................................................................
+Clock cycle 0
+Computer system inputs
+         reset=0 dma=1 dma_a=0000 dma_d=f101
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 0000  m_real_addr = 0000  m_data = f101  m_out =0000
+
+
+........................................................................
+Clock cycle 1
+Computer system inputs
+         reset=0 dma=1 dma_a=0001 dma_d=000b
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 0001  m_real_addr = 0001  m_data = 000b  m_out =0000
+
+
+........................................................................
+Clock cycle 2
+Computer system inputs
+         reset=0 dma=1 dma_a=0002 dma_d=f201
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 0002  m_real_addr = 0002  m_data = f201  m_out =0000
+
+
+........................................................................
+Clock cycle 3
+Computer system inputs
+         reset=0 dma=1 dma_a=0003 dma_d=000c
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 0003  m_real_addr = 0003  m_data = 000c  m_out =0000
+
+
+........................................................................
+Clock cycle 4
+Computer system inputs
+         reset=0 dma=1 dma_a=0004 dma_d=2312
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 0004  m_real_addr = 0004  m_data = 2312  m_out =0000
+
+
+........................................................................
+Clock cycle 5
+Computer system inputs
+         reset=0 dma=1 dma_a=0005 dma_d=f101
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 0005  m_real_addr = 0005  m_data = f101  m_out =0000
+
+
+........................................................................
+Clock cycle 6
+Computer system inputs
+         reset=0 dma=1 dma_a=0006 dma_d=000d
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 0006  m_real_addr = 0006  m_data = 000d  m_out =0000
+
+
+........................................................................
+Clock cycle 7
+Computer system inputs
+         reset=0 dma=1 dma_a=0007 dma_d=f201
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 0007  m_real_addr = 0007  m_data = f201  m_out =0000
+
+
+........................................................................
+Clock cycle 8
+Computer system inputs
+         reset=0 dma=1 dma_a=0008 dma_d=000e
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 0008  m_real_addr = 0008  m_data = 000e  m_out =0000
+
+
+........................................................................
+Clock cycle 9
+Computer system inputs
+         reset=0 dma=1 dma_a=0009 dma_d=2312
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 0009  m_real_addr = 0009  m_data = 2312  m_out =0000
+
+
+........................................................................
+Clock cycle 10
+Computer system inputs
+         reset=0 dma=1 dma_a=000a dma_d=d000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 000a  m_real_addr = 000a  m_data = d000  m_out =0000
+
+
+........................................................................
+Clock cycle 11
+Computer system inputs
+         reset=0 dma=1 dma_a=000b dma_d=0006
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 000b  m_real_addr = 000b  m_data = 0006  m_out =0000
+
+
+........................................................................
+Clock cycle 12
+Computer system inputs
+         reset=0 dma=1 dma_a=000c dma_d=0010
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 000c  m_real_addr = 000c  m_data = 0010  m_out =0000
+
+
+........................................................................
+Clock cycle 13
+Computer system inputs
+         reset=0 dma=1 dma_a=000d dma_d=0025
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 000d  m_real_addr = 000d  m_data = 0025  m_out =0000
+
+
+........................................................................
+Clock cycle 14
+Computer system inputs
+         reset=0 dma=1 dma_a=000e dma_d=0025
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0000  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 1
+     m_addr = 000e  m_real_addr = 000e  m_data = 0025  m_out =0000
+
+
+........................................................................
+Clock cycle 15
+Computer system inputs
+         reset=1 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 1
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = f101  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 0000  m_real_addr = 0000  m_data = 0000  m_out =f101
+
+
+************************************************************************
+Reset: control algorithm starting
+************************************************************************
+........................................................................
+Clock cycle 16
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 1  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 1  ctl_alu_b   = 1  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 1  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 1  ctl_pc_ld   = 1
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 1  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 0000  pc = 0000  ad = 0000   a = 0000   b = 0000   r = 0001
+     x = 0000   y = 0000   p = f101  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 0000  m_real_addr = 0000  m_data = 0000  m_out =f101
+
+
+........................................................................
+Clock cycle 17
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 1       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f101  pc = 0001  ad = 0000   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = f101  ma = 0000  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 0000  m_real_addr = 0000  m_data = 0000  m_out =f101
+
+
+........................................................................
+Clock cycle 18
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 1
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 1  ctl_alu_b   = 1  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 1  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 1
+    ctl_ad_ld   = 1  ctl_ad_alu  = 0  ctl_ma_pc   = 1  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f101  pc = 0001  ad = 0000   a = 0000   b = 0000   r = 0002
+     x = 0001   y = 0000   p = 000b  ma = 0001  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 0001  m_real_addr = 0001  m_data = 0000  m_out =000b
+
+
+........................................................................
+Clock cycle 19
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 1     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 1  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 1  ctl_ad_alu  = 1  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f101  pc = 0002  ad = 000b   a = 0000   b = 0000   r = 000b
+     x = 0000   y = 000b   p = 0006  ma = 000b  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000b  m_real_addr = 000b  m_data = 0000  m_out =0006
+
+Fetched displacement = 000b
+
+........................................................................
+Clock cycle 20
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 1
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 1    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 1  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f101  pc = 0002  ad = 000b   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0006  ma = 000b  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000b  m_real_addr = 000b  m_data = 0000  m_out =0006
+
+Register file update: R1 := 0006
+
+************************************************************************
+Executed instruction:  load  R1,000b[R0]   effective address = 000b
+R1 := 0006 was loaded in cycle 20
+Processor state:    pc = 0002  ir = f101  ad = 000b
+************************************************************************
+
+........................................................................
+Clock cycle 21
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 1  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 1  ctl_alu_b   = 1  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 1  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 1  ctl_pc_ld   = 1
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 1  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f101  pc = 0002  ad = 000b   a = 0000   b = 0006   r = 0003
+     x = 0002   y = 0006   p = f201  ma = 0002  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 0002  m_real_addr = 0002  m_data = 0000  m_out =f201
+
+
+........................................................................
+Clock cycle 22
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 1       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f201  pc = 0003  ad = 000b   a = 0000   b = 0006   r = 0006
+     x = 0000   y = 0006   p = 0006  ma = 000b  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000b  m_real_addr = 000b  m_data = 0000  m_out =0006
+
+
+........................................................................
+Clock cycle 23
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 1
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 1  ctl_alu_b   = 1  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 1  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 1
+    ctl_ad_ld   = 1  ctl_ad_alu  = 0  ctl_ma_pc   = 1  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f201  pc = 0003  ad = 000b   a = 0000   b = 0006   r = 0004
+     x = 0003   y = 0006   p = 000c  ma = 0003  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 0003  m_real_addr = 0003  m_data = 0000  m_out =000c
+
+
+........................................................................
+Clock cycle 24
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 1     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 1  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 1  ctl_ad_alu  = 1  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f201  pc = 0004  ad = 000c   a = 0000   b = 0006   r = 000c
+     x = 0000   y = 000c   p = 0010  ma = 000c  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000c  m_real_addr = 000c  m_data = 0000  m_out =0010
+
+Fetched displacement = 000c
+
+........................................................................
+Clock cycle 25
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 1
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 1    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 1  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f201  pc = 0004  ad = 000c   a = 0000   b = 0006   r = 0006
+     x = 0000   y = 0006   p = 0010  ma = 000c  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000c  m_real_addr = 000c  m_data = 0000  m_out =0010
+
+Register file update: R2 := 0010
+
+************************************************************************
+Executed instruction:  load  R2,000c[R0]   effective address = 000c
+R2 := 0010 was loaded in cycle 25
+Processor state:    pc = 0004  ir = f201  ad = 000c
+************************************************************************
+
+........................................................................
+Clock cycle 26
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 1  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 1  ctl_alu_b   = 1  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 1  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 1  ctl_pc_ld   = 1
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 1  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f201  pc = 0004  ad = 000c   a = 0000   b = 0006   r = 0005
+     x = 0004   y = 0006   p = 2312  ma = 0004  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 0004  m_real_addr = 0004  m_data = 0000  m_out =2312
+
+
+........................................................................
+Clock cycle 27
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 1       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 0005  ad = 000c   a = 0006   b = 0010   r = 0016
+     x = 0006   y = 0010   p = 0010  ma = 000c  md = 0006 cnd = 1 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000c  m_real_addr = 000c  m_data = 0006  m_out =0010
+
+
+........................................................................
+Clock cycle 28
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 1      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 1  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 0005  ad = 000c   a = 0006   b = 0010   r = 0016
+     x = 0006   y = 0010   p = 0010  ma = 000c  md = 0006 cnd = 1 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000c  m_real_addr = 000c  m_data = 0006  m_out =0010
+
+
+........................................................................
+Clock cycle 29
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 1      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 0005  ad = 000c   a = 0006   b = 0010   r = 0016
+     x = 0006   y = 0010   p = 0010  ma = 000c  md = 0006 cnd = 1 ready = 0
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000c  m_real_addr = 000c  m_data = 0006  m_out =0010
+
+
+........................................................................
+Clock cycle 30
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 1      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 0005  ad = 000c   a = 0006   b = 0010   r = 0016
+     x = 0006   y = 0010   p = 0010  ma = 000c  md = 0006 cnd = 1 ready = 0
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000c  m_real_addr = 000c  m_data = 0006  m_out =0010
+
+
+........................................................................
+Clock cycle 31
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 1      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 0005  ad = 000c   a = 0006   b = 0010   r = 0016
+     x = 0006   y = 0010   p = 0010  ma = 000c  md = 0006 cnd = 1 ready = 0
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000c  m_real_addr = 000c  m_data = 0006  m_out =0010
+
+
+........................................................................
+Clock cycle 32
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 1      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 0005  ad = 000c   a = 0006   b = 0010   r = 0016
+     x = 0006   y = 0010   p = 0010  ma = 000c  md = 0006 cnd = 1 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000c  m_real_addr = 000c  m_data = 0006  m_out =0010
+
+
+........................................................................
+Clock cycle 33
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 1
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 1     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 1  ctl_rf_pc   = 0
+    ctl_rf_alu  = 1  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 1
+
+Datapath
+    ir = 2312  pc = 0005  ad = 000c   a = 0006   b = 0010   r = 0016
+     x = 0006   y = 0010   p = 0060  ma = 000c  md = 0006 cnd = 1 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000c  m_real_addr = 000c  m_data = 0006  m_out =0010
+
+Register file update: R3 := 0060
+
+************************************************************************
+Executed instruction:  mul  R3,000c[R1]   effective address = 000c
+R3 := 0060 was loaded in cycle 33
+Processor state:    pc = 0005  ir = 2312  ad = 000c
+************************************************************************
+
+........................................................................
+Clock cycle 34
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 1  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 1  ctl_alu_b   = 1  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 1  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 1  ctl_pc_ld   = 1
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 1  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 0005  ad = 000c   a = 0006   b = 0010   r = 0006
+     x = 0005   y = 0010   p = f101  ma = 0005  md = 0006 cnd = 1 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 0005  m_real_addr = 0005  m_data = 0006  m_out =f101
+
+
+........................................................................
+Clock cycle 35
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 1       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f101  pc = 0006  ad = 000c   a = 0000   b = 0006   r = 0006
+     x = 0000   y = 0006   p = 0010  ma = 000c  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000c  m_real_addr = 000c  m_data = 0000  m_out =0010
+
+
+........................................................................
+Clock cycle 36
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 1
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 1  ctl_alu_b   = 1  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 1  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 1
+    ctl_ad_ld   = 1  ctl_ad_alu  = 0  ctl_ma_pc   = 1  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f101  pc = 0006  ad = 000c   a = 0000   b = 0006   r = 0007
+     x = 0006   y = 0006   p = 000d  ma = 0006  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 0006  m_real_addr = 0006  m_data = 0000  m_out =000d
+
+
+........................................................................
+Clock cycle 37
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 1     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 1  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 1  ctl_ad_alu  = 1  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f101  pc = 0007  ad = 000d   a = 0000   b = 0006   r = 000d
+     x = 0000   y = 000d   p = 0025  ma = 000d  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000d  m_real_addr = 000d  m_data = 0000  m_out =0025
+
+Fetched displacement = 000d
+
+........................................................................
+Clock cycle 38
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 1
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 1    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 1  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f101  pc = 0007  ad = 000d   a = 0000   b = 0006   r = 0006
+     x = 0000   y = 0006   p = 0025  ma = 000d  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000d  m_real_addr = 000d  m_data = 0000  m_out =0025
+
+Register file update: R1 := 0025
+
+************************************************************************
+Executed instruction:  load  R1,000d[R0]   effective address = 000d
+R1 := 0025 was loaded in cycle 38
+Processor state:    pc = 0007  ir = f101  ad = 000d
+************************************************************************
+
+........................................................................
+Clock cycle 39
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 1  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 1  ctl_alu_b   = 1  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 1  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 1  ctl_pc_ld   = 1
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 1  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f101  pc = 0007  ad = 000d   a = 0000   b = 0025   r = 0008
+     x = 0007   y = 0025   p = f201  ma = 0007  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 0007  m_real_addr = 0007  m_data = 0000  m_out =f201
+
+
+........................................................................
+Clock cycle 40
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 1       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f201  pc = 0008  ad = 000d   a = 0000   b = 0025   r = 0025
+     x = 0000   y = 0025   p = 0025  ma = 000d  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000d  m_real_addr = 000d  m_data = 0000  m_out =0025
+
+
+........................................................................
+Clock cycle 41
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 1
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 1  ctl_alu_b   = 1  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 1  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 1
+    ctl_ad_ld   = 1  ctl_ad_alu  = 0  ctl_ma_pc   = 1  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f201  pc = 0008  ad = 000d   a = 0000   b = 0025   r = 0009
+     x = 0008   y = 0025   p = 000e  ma = 0008  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 0008  m_real_addr = 0008  m_data = 0000  m_out =000e
+
+
+........................................................................
+Clock cycle 42
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 1     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 1  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 1  ctl_ad_alu  = 1  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f201  pc = 0009  ad = 000e   a = 0000   b = 0025   r = 000e
+     x = 0000   y = 000e   p = 0025  ma = 000e  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000e  m_real_addr = 000e  m_data = 0000  m_out =0025
+
+Fetched displacement = 000e
+
+........................................................................
+Clock cycle 43
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 1
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 1    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 1  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f201  pc = 0009  ad = 000e   a = 0000   b = 0025   r = 0025
+     x = 0000   y = 0025   p = 0025  ma = 000e  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000e  m_real_addr = 000e  m_data = 0000  m_out =0025
+
+Register file update: R2 := 0025
+
+************************************************************************
+Executed instruction:  load  R2,000e[R0]   effective address = 000e
+R2 := 0025 was loaded in cycle 43
+Processor state:    pc = 0009  ir = f201  ad = 000e
+************************************************************************
+
+........................................................................
+Clock cycle 44
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 1  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 1  ctl_alu_b   = 1  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 1  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 1  ctl_pc_ld   = 1
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 1  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = f201  pc = 0009  ad = 000e   a = 0000   b = 0025   r = 000a
+     x = 0009   y = 0025   p = 2312  ma = 0009  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 0009  m_real_addr = 0009  m_data = 0000  m_out =2312
+
+
+........................................................................
+Clock cycle 45
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 1       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 000a  ad = 000e   a = 0025   b = 0025   r = 004a
+     x = 0025   y = 0025   p = 0025  ma = 000e  md = 0025 cnd = 1 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000e  m_real_addr = 000e  m_data = 0025  m_out =0025
+
+
+........................................................................
+Clock cycle 46
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 1      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 1  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 000a  ad = 000e   a = 0025   b = 0025   r = 004a
+     x = 0025   y = 0025   p = 0025  ma = 000e  md = 0025 cnd = 1 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000e  m_real_addr = 000e  m_data = 0025  m_out =0025
+
+
+........................................................................
+Clock cycle 47
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 1      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 000a  ad = 000e   a = 0025   b = 0025   r = 004a
+     x = 0025   y = 0025   p = 0025  ma = 000e  md = 0025 cnd = 1 ready = 0
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000e  m_real_addr = 000e  m_data = 0025  m_out =0025
+
+
+........................................................................
+Clock cycle 48
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 1      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 000a  ad = 000e   a = 0025   b = 0025   r = 004a
+     x = 0025   y = 0025   p = 0025  ma = 000e  md = 0025 cnd = 1 ready = 0
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000e  m_real_addr = 000e  m_data = 0025  m_out =0025
+
+
+........................................................................
+Clock cycle 49
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 1      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 000a  ad = 000e   a = 0025   b = 0025   r = 004a
+     x = 0025   y = 0025   p = 0025  ma = 000e  md = 0025 cnd = 1 ready = 0
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000e  m_real_addr = 000e  m_data = 0025  m_out =0025
+
+
+........................................................................
+Clock cycle 50
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 1      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 000a  ad = 000e   a = 0025   b = 0025   r = 004a
+     x = 0025   y = 0025   p = 0025  ma = 000e  md = 0025 cnd = 1 ready = 0
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000e  m_real_addr = 000e  m_data = 0025  m_out =0025
+
+
+........................................................................
+Clock cycle 51
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 1      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 000a  ad = 000e   a = 0025   b = 0025   r = 004a
+     x = 0025   y = 0025   p = 0025  ma = 000e  md = 0025 cnd = 1 ready = 0
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000e  m_real_addr = 000e  m_data = 0025  m_out =0025
+
+
+........................................................................
+Clock cycle 52
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 1      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 000a  ad = 000e   a = 0025   b = 0025   r = 004a
+     x = 0025   y = 0025   p = 0025  ma = 000e  md = 0025 cnd = 1 ready = 0
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000e  m_real_addr = 000e  m_data = 0025  m_out =0025
+
+
+........................................................................
+Clock cycle 53
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 1      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 000a  ad = 000e   a = 0025   b = 0025   r = 004a
+     x = 0025   y = 0025   p = 0025  ma = 000e  md = 0025 cnd = 1 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000e  m_real_addr = 000e  m_data = 0025  m_out =0025
+
+
+........................................................................
+Clock cycle 54
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 1
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 1     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 1  ctl_rf_pc   = 0
+    ctl_rf_alu  = 1  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 1
+
+Datapath
+    ir = 2312  pc = 000a  ad = 000e   a = 0025   b = 0025   r = 004a
+     x = 0025   y = 0025   p = 0559  ma = 000e  md = 0025 cnd = 1 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000e  m_real_addr = 000e  m_data = 0025  m_out =0025
+
+Register file update: R3 := 0559
+
+************************************************************************
+Executed instruction:  mul  R3,000e[R1]   effective address = 000e
+R3 := 0559 was loaded in cycle 54
+Processor state:    pc = 000a  ir = 2312  ad = 000e
+************************************************************************
+
+........................................................................
+Clock cycle 55
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 1  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 1  ctl_alu_b   = 1  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 1  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 1  ctl_pc_ld   = 1
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 1  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = 2312  pc = 000a  ad = 000e   a = 0025   b = 0025   r = 000b
+     x = 000a   y = 0025   p = d000  ma = 000a  md = 0025 cnd = 1 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000a  m_real_addr = 000a  m_data = 0025  m_out =d000
+
+
+........................................................................
+Clock cycle 56
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 0
+
+Control state
+   st_instr_fet = 0  st_dispatch = 1       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 0      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = d000  pc = 000b  ad = 000e   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0025  ma = 000e  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000e  m_real_addr = 000e  m_data = 0000  m_out =0025
+
+
+........................................................................
+Clock cycle 57
+Computer system inputs
+         reset=0 dma=0 dma_a=0000 dma_d=0000
+ctl_start = 1
+
+Control state
+   st_instr_fet = 0  st_dispatch = 0       st_add = 0       st_sub = 0
+        st_mul0 = 0      st_mul1 = 0      st_mul2 = 0     st_cmplt = 0     st_cmpeq = 0     st_cmpgt = 0
+       st_trap0 = 1      st_lea0 = 0      st_lea1 = 0     st_load0 = 0
+       st_load1 = 0     st_load2 = 0    st_store0 = 0    st_store1 = 0
+      st_store2 = 0     st_jump0 = 0     st_jump1 = 0    st_jumpf0 = 0
+      st_jumpf1 = 0    st_jumpt0 = 0    st_jumpt1 = 0      st_jal0 = 0
+        st_jal1 = 0    st_loadxi0 = 0    st_loadxi1 = 0    st_loadxi2 = 0
+      st_loadxi3 = 0
+
+Control signals
+    ctl_alu_a   = 0  ctl_alu_b   = 0  ctl_alu_c   = 0  ctl_alu_d   = 0
+    ctl_x_pc    = 0  ctl_y_ad    = 0  ctl_rf_ld   = 0  ctl_rf_pc   = 0
+    ctl_rf_alu  = 0  ctl_rf_sd   = 0  ctl_ir_ld   = 0  ctl_pc_ld   = 0
+    ctl_ad_ld   = 0  ctl_ad_alu  = 0  ctl_ma_pc   = 0  ctl_sto     = 0  ctl_mul_start = 0  ctl_r_prod  = 0
+
+Datapath
+    ir = d000  pc = 000b  ad = 000e   a = 0000   b = 0000   r = 0000
+     x = 0000   y = 0000   p = 0025  ma = 000e  md = 0000 cnd = 0 ready = 1
+
+Memory
+   ctl_sto = 0      m_sto = 0
+     m_addr = 000e  m_real_addr = 000e  m_data = 0000  m_out =0025
+
+
+************************************************************************
+Trap instruction executed
+Simulation of Sigma16_M1 circuit terminating
+************************************************************************
+
+************************************************************************
+Executed instruction:  trap  R0,000e[R0]   effective address = 000e
+Processor state:    pc = 000b  ir = d000  ad = 000e
+************************************************************************
+
