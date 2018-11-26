@@ -24,6 +24,7 @@ data CtlSig a = CtlSig
    ctl_rf_pc,   --   Input to register file is pc (if 0, check ctl_rf_alu)
    ctl_rf_alu,  -- Input to register file is ALU output r (if 0, use m)
    ctl_rf_sd,   -- Use ir_d as source a address (if 0, use ir_sa)
+   ctl_d_ira,   -- USe ir_a as destination address
 
 -- Controls for system registers
    ctl_ir_ld,   -- Load ir register (if 0, remain unchanged)

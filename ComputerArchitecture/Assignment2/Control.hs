@@ -174,22 +174,23 @@ repeat forever
                         ctl_alu_abcd=0000,
                         ctl_ad_ld, ctl_ad_alu, ctl_pc_ld, ctl_pc_ad]
         7 -> -- loadxi instruction
-            st_loadxi0:                         /get the displacement
+            st_loadxi0:
               ad := mem[pc], pc++;  
                 assert [ctl_ma_pc, ctl_ad_ld, ctl_x_pc,
                         ctl_alu_abcd=1100, ctl_pc_ld]
-            st_loadxi1:                         /calculate effective address
-              ad := reg[ir_sa] + ad  
+            st_loadxi1:
+              ad := reg[ir_sa] + ad
                 assert [set ctl_y_ad, ctl_alu_abcd=0000,
                         set ctl_ad_ld, ctl_ad_alu]
-            st_loadxi2:                         /load the memory
+            st_loadxi2:
               reg[ir_d] := mem[ad]
                 assert [ctl_rf_ld]
-            
-            st_loadxi3:                         /let reg[ir_d]++
-              reg[ir_d]++;
-                assert [ctl_rf_sd, ctl_rf_alu,
-                        ctl_rf_ld, ctl_alu_abcd = 1100]
+            st_loadxi3:
+              reg[ir_sa] = reg[ir_sa] + 1
+                assert [ctl_rf_ld, ctl_alu_abcd = 1100,
+                        ctl_rf_alu, ctl_d_ira]
+              
+
         8 -> -- nop
         9 -> -- nop
         10 -> -- nop
@@ -275,7 +276,7 @@ control reset ir cond ready = (ctlstate,start,ctlsigs)
       ctl_rf_pc   = orw [st_jal1]
       ctl_rf_alu  = orw [st_lea1,st_add,st_sub,st_cmpeq,st_mul2,
                            st_cmplt,st_cmpgt,st_loadxi3]
-      ctl_rf_sd   = orw [st_store2,st_jumpf0,st_loadxi3]
+      ctl_rf_sd   = orw [st_store2,st_jumpf0]
       ctl_alu_a   = orw [st_instr_fet,st_load0,st_store0,st_lea0,
                          st_cmpeq,st_cmplt,st_cmpgt,st_jumpf0,st_jal0,st_loadxi0,st_loadxi3]
       ctl_alu_b   = orw [st_instr_fet,st_load0,st_store0,st_lea0,
@@ -299,6 +300,7 @@ control reset ir cond ready = (ctlstate,start,ctlsigs)
       ctl_y_ad    = orw [st_load1,st_store1,st_lea1,st_jumpt1,
                          st_jumpf1,st_jump1,st_jal1,st_loadxi1]
       ctl_sto     = orw [st_store2]
+      ctl_d_ira   = orw [st_loadxi3]
       ctl_mul_start = orw [st_mul0]
       ctl_r_prod = orw [st_mul2]
 
@@ -307,7 +309,7 @@ control reset ir cond ready = (ctlstate,start,ctlsigs)
          ctl_x_pc,   ctl_y_ad,   ctl_rf_ld,  ctl_rf_pc,
          ctl_rf_alu, ctl_rf_sd,  ctl_ir_ld,  ctl_pc_ld,
          ctl_pc_ad,  ctl_ad_ld,  ctl_ad_alu, ctl_ma_pc,
-         ctl_sto, ctl_mul_start, ctl_r_prod}
+         ctl_sto,    ctl_d_ira,  ctl_mul_start, ctl_r_prod}
 
       ctlstate = CtlState
         {st_instr_fet,

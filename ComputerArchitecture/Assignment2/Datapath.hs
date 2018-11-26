@@ -29,7 +29,7 @@ datapath ctlsigs memdat = (ma,md,cond,ready,a,b,ir,pc,ad,ovfl,r,x,y,p)
       k =  4    -- the register file contains 2^k registers 
 
 -- Registers
-      (a,b) = regfile n k (ctl_rf_ld ctlsigs) ir_d rf_sa rf_sb p
+      (a,b) = regfile n k (ctl_rf_ld ctlsigs) rf_d rf_sa rf_sb p
       ir = reg n (ctl_ir_ld ctlsigs) memdat
       pc = reg n (ctl_pc_ld ctlsigs) q
       ad = reg n (ctl_ad_ld ctlsigs) (mux1w (ctl_ad_alu ctlsigs) memdat r)
@@ -46,6 +46,7 @@ datapath ctlsigs memdat = (ma,md,cond,ready,a,b,ir,pc,ad,ovfl,r,x,y,p)
       y = mux1w (ctl_y_ad ctlsigs) b ad             -- alu input 2
       rf_sa = mux1w (ctl_rf_sd ctlsigs) ir_sa ir_d  -- a = reg[rf_sa]
       rf_sb = ir_sb                                 -- b = reg[rf_sb]
+      rf_d = mux1w (ctl_d_ira ctlsigs) ir_d ir_sa
       p  = mux1w (ctl_rf_pc ctlsigs)                -- regfile data input
              (mux1w (ctl_rf_alu ctlsigs) memdat (mux1w (ctl_r_prod ctlsigs) r (field prod 16 16)))
              pc
