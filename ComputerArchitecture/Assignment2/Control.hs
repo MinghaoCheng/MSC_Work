@@ -190,8 +190,6 @@ repeat forever
               reg[ir_d]++;
                 assert [ctl_rf_sd, ctl_rf_alu,
                         ctl_rf_ld, ctl_alu_abcd = 1100]
-
-        7 -> -- nop
         8 -> -- nop
         9 -> -- nop
         10 -> -- nop

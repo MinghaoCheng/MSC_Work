@@ -9,12 +9,13 @@ module Main where
     arraymax :: [String]
     arraymax =
      [
-      "f100", "0001", -- 0000 start lea   R1,1[R0]      ; R1 = constant 1
-      "f207", "0005", -- 0002
-      "d000",         -- 0004        trap  R0,R0,R0     ; terminate
+        "f207", "0005", -- 0000 loadxi R2,5[R0]
+        "f307", "0006", -- 0002 loadxi R3,6[R0]
+        "d000",         -- 0004        trap  R0,R0,R0     ; terminate
                       
-                      -- 0004 ; Data area
-      "0006"          -- 0005 n        data   6
+                      -- ; Data area
+        "0006",         -- 0005 n        data   6
+        "000a"          -- 0006 n        data   a
      ]
     
     -----------------------------------------------------------------------
