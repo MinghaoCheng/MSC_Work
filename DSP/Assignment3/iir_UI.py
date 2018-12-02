@@ -87,6 +87,14 @@ class UI:
         original_yaxis = pg.AxisItem(orientation='left')
         original_yaxis.setTicks([ylabels])
 
+        ylabels = [
+            (-self.vmax*0.25, str(-self.vmax*0.25)),
+            (-self.vmax*0.5, str(-self.vmax*0.5)),
+            (0, str(0)),
+            (self.vmax*0.25, str(self.vmax*0.25)),
+            (self.vmax*0.5,   str(self.vmax*0.5))
+        ]
+
         filtered_xaxis = pg.AxisItem(orientation='bottom')
         filtered_xaxis.setTicks([xlabels])
         filtered_yaxis = pg.AxisItem(orientation='left')
@@ -104,7 +112,7 @@ class UI:
         original_plot.setXRange(0, self.chunksize, padding=0.005)
 
         filtered_plot.plot(pen = 'c', width = 3)
-        filtered_plot.setYRange(0, self.vmax, padding=0)
+        filtered_plot.setYRange(-(self.vmax>>1), self.vmax>>1, padding=0)
         filtered_plot.setXRange(0, self.chunksize, padding=0.005)
 
         # start a timer to trigger the refresh event

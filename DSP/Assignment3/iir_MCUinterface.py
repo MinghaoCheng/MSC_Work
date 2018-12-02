@@ -17,7 +17,7 @@ class MCU_interface:
         self.__frame_counter = 0
         while (True):
             # packet header
-            # time.sleep(0.001)
+            # time.sleep(0.0001)
             if(struct.unpack("B", self.__port.read(1))[0] == 115):
                 # frame counter 0 ~ 255
                 MCU_frame_counter = struct.unpack("B", self.__port.read(1))[0]

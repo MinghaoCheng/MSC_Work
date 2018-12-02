@@ -15,27 +15,28 @@ def plt_plot_task(w,h):
     plt.figure(1)
     plt.subplot(2,1,1)
     plt.title('Amplitude response')
-    plt.plot(w/np.pi/2 * 200, 20 * np.log10(np.abs(h)))
+    plt.plot(w/np.pi/2 * 300, 20 * np.log10(np.abs(h)))
     plt.subplot(2,1,2)
     plt.title('Phase response')
-    plt.plot(w/np.pi/2 * 200,np.angle(h))
+    plt.plot(w/np.pi/2 * 300,np.angle(h))
     plt.show()
 
 def main():
     # specify parameters
     time_length = 5         # how much time of data would be shown
-    Samplingrate = 200
+    Samplingrate = 300
     v_max = 3300
 
     # filter design
-    bandstop = sig.cheby2(N = 8, Wn = [48/100, 53/100], rs = 40, btype = 'bandstop', output = 'sos')
-    # highpass = sig.cheby2(N = 16, Wn = 1/100, rs = 40, btype = 'highpass', output = 'sos')
+    bandstop = sig.butter(N = 8, Wn = [95/150, 105/150], btype = 'bandstop', output = 'sos')
+    highpass = sig.butter(N = 2, Wn = 0.1/150, btype = 'highpass', output = 'sos')
     
-    # sos = np.append(highpass, bandstop)
-    # sos = sos.reshape(int(len(sos)/6), 6)
-    sos = bandstop
+    sos = np.append(highpass, bandstop)
+    sos = sos.reshape(int(len(sos)/6), 6)
+    # sos = bandstop
 
     # plot the frequency response
+    w = np.linspace(0, 2 * np.pi, 10000)
     w, h = sig.sosfreqz(sos)
     freq_response_process = multiprocessing.Process(target = plt_plot_task(w,h), name = "freq_response_plot")
     freq_response_process.start()
