@@ -1,0 +1,341 @@
+###############################################################################
+#
+# IAR ELF Linker V8.32.1.169/W32 for ARM                  28/Nov/2018  13:54:12
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Exe\Accessed3.out
+#    Map file     =  
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\List\Accessed3.map
+#    Command line =  
+#        -f C:\Users\Cheng\AppData\Local\Temp\EW3301.tmp
+#        (D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\ADC.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\clk.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\delay.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\LED.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\main.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\Protocol.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\ring_buffer.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\startup_stm32l152xe.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_it.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_adc.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_comp.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_crc.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_dac.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_dma.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_exti.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_gpio.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_i2c.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_opamp.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_pwr.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_rcc.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_rtc.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_spi.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_tim.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_usart.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\stm32l1xx_ll_utils.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\system_stm32l1xx.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\Timer.o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj\Uart.o
+#        --no_out_extension -o
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\Exe\Accessed3.out --map
+#        D:\MSC_local\DSP\Assignment3\PROJ\Release\List\Accessed3.map --config
+#        "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.2\arm\config\linker\ST\stm32l152xE.icf" --entry __iar_program_start
+#        --inline --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x807'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 4K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2001'3fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+No sections matched the following patterns:
+
+  section .eeprom  in "P3"
+
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                       0x124
+  .intvec            ro code   0x800'0000   0x124  startup_stm32l152xe.o [1]
+                             - 0x800'0124   0x124
+
+"P1":                                       0x8f0
+  .text              ro code   0x800'0124   0x2c8  Uart.o [1]
+  .text              ro code   0x800'03ec    0x28  ring_buffer.o [1]
+  .text              ro code   0x800'0414   0x10c  ADC.o [1]
+  .text              ro code   0x800'0520    0xdc  clk.o [1]
+  .text              ro code   0x800'05fc    0x28  stm32l1xx_ll_utils.o [1]
+  .text              ro code   0x800'0624    0x88  Timer.o [1]
+  .text              ro code   0x800'06ac    0x7c  Protocol.o [1]
+  .text              ro code   0x800'0728    0x60  main.o [1]
+  .text              ro code   0x800'0788    0x40  LED.o [1]
+  .text              ro code   0x800'07c8    0x50  system_stm32l1xx.o [1]
+  .text              ro code   0x800'0818    0x3a  zero_init3.o [4]
+  .text              ro code   0x800'0852    0x2c  copy_init3.o [4]
+  .text              ro code   0x800'087e    0x12  stm32l1xx_it.o [1]
+  .text              ro code   0x800'0890    0x28  data_init.o [4]
+  .iar.init_table    const     0x800'08b8    0x24  - Linker created -
+  .text              ro code   0x800'08dc    0x1e  cmain.o [4]
+  .text              ro code   0x800'08fa     0x4  exit.o [2]
+  .text              ro code   0x800'0900     0xa  cexit.o [4]
+  .text              ro code   0x800'090c     0xc  XXexit.o [4]
+  .text              ro code   0x800'0918    0x10  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0928     0xc  cstartup_M.o [4]
+  .rodata            const     0x800'0934     0x8  system_stm32l1xx.o [1]
+  .text              ro code   0x800'093c     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0940     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0944     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0948     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'094c     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0950     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0954     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0958     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'095c     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0960     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0964     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0968     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'096c     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0970     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0974     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0978     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'097c     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0980     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0984     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0988     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'098c     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0990     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0994     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0998     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'099c     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09a0     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09a4     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09a8     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09ac     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09b0     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09b4     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09b8     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09bc     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09c0     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09c4     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09c8     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09cc     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09d0     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09d4     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09d8     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09dc     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09e0     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09e4     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09e8     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09ec     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09f0     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09f4     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09f8     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'09fc     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0a00     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0a04     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0a08     0x4  startup_stm32l152xe.o [1]
+  .text              ro code   0x800'0a0c     0x4  startup_stm32l152xe.o [1]
+  Initializer bytes  const     0x800'0a10     0x4  <for P2-1>
+  .rodata            const     0x800'0a14     0x0  zero_init3.o [4]
+  .rodata            const     0x800'0a14     0x0  copy_init3.o [4]
+                             - 0x800'0a14   0x8f0
+
+"P2", part 1 of 3:                            0x4
+  P2-1                        0x2000'0000     0x4  <Init block>
+    .data            inited   0x2000'0000     0x4  system_stm32l1xx.o [1]
+                            - 0x2000'0004     0x4
+
+"P2", part 2 of 3:                          0x11c
+  .bss               zero     0x2000'0004   0x110  Uart.o [1]
+  .bss               zero     0x2000'0114     0x9  Protocol.o [1]
+                            - 0x2000'011d   0x119
+
+"P2", part 3 of 3:                         0x1000
+  CSTACK                      0x2000'0120  0x1000  <Block>
+    CSTACK           uninit   0x2000'0120  0x1000  <Block tail>
+                            - 0x2000'1120  0x1000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'0a14   0x807'ffff  0x7'f5ec
+  0x2000'1120  0x2001'3fff  0x1'2ee0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x119:
+          0x2000'0004  0x119
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4:
+           0x800'0a10    0x4
+    1 destination range, total size 0x4:
+          0x2000'0000    0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+command line/config:
+    ------------------------------------------------
+    Total:
+
+D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj: [1]
+    ADC.o                      268
+    LED.o                       64
+    Protocol.o                 124                 9
+    Timer.o                    136
+    Uart.o                     712               272
+    clk.o                      220
+    main.o                      96
+    ring_buffer.o               40
+    startup_stm32l152xe.o      520
+    stm32l1xx_it.o              18
+    stm32l1xx_ll_utils.o        40
+    system_stm32l1xx.o          80       12        4
+    ------------------------------------------------
+    Total:                   2 318       12      285
+
+dl7M_tln.a: [2]
+    exit.o                       4
+    ------------------------------------------------
+    Total:                       4
+
+m7M_tl.a: [3]
+    ------------------------------------------------
+    Total:
+
+rt7M_tl.a: [4]
+    XXexit.o                    12
+    cexit.o                     10
+    cmain.o                     30
+    copy_init3.o                44
+    cstartup_M.o                12
+    data_init.o                 40
+    zero_init3.o                58
+    ------------------------------------------------
+    Total:                     206
+
+    Gaps                         4
+    Linker created                       36    4 096
+----------------------------------------------------
+    Grand Total:             2 532       48    4 381
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'08b8          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'08dc          --   Gb  - Linker created -
+?main                    0x800'08dd         Code  Gb  cmain.o [4]
+ADC1_IRQHandler          0x800'0749   0x3a  Code  Gb  main.o [1]
+ADC_Init                 0x800'0415   0xba  Code  Gb  ADC.o [1]
+ADC_Start                0x800'04cf   0x30  Code  Gb  ADC.o [1]
+APBPrescTable            0x800'0934    0x8  Data  Gb  system_stm32l1xx.o [1]
+BusFault_Handler         0x800'0885    0x2  Code  Gb  stm32l1xx_it.o [1]
+CSTACK$$Base            0x2000'0120          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'1120          --   Gb  - Linker created -
+DebugMon_Handler         0x800'088b    0x2  Code  Gb  stm32l1xx_it.o [1]
+HardFault_Handler        0x800'0881    0x2  Code  Gb  stm32l1xx_it.o [1]
+Init_ring_buffer         0x800'03ed    0xc  Code  Gb  ring_buffer.o [1]
+LED_Init                 0x800'0789   0x28  Code  Gb  LED.o [1]
+LED_Toggle               0x800'07b1    0xc  Code  Gb  LED.o [1]
+LL_GPIO_SetAFPin_0_7     0x800'019d   0x28  Code  Lc  Uart.o [1]
+LL_GPIO_SetPinMode       0x800'0125   0x28  Code  Lc  Uart.o [1]
+LL_GPIO_SetPinPull       0x800'0175   0x28  Code  Lc  Uart.o [1]
+LL_GPIO_SetPinSpeed      0x800'014d   0x28  Code  Lc  Uart.o [1]
+LL_Init1msTick           0x800'05fd   0x18  Code  Gb  stm32l1xx_ll_utils.o [1]
+LL_SetSystemCoreClock    0x800'0615    0x6  Code  Gb  stm32l1xx_ll_utils.o [1]
+LL_USART_SetBaudRate     0x800'01c5   0x68  Code  Lc  Uart.o [1]
+MemManage_Handler        0x800'0883    0x2  Code  Gb  stm32l1xx_it.o [1]
+NMI_Handler              0x800'087f    0x2  Code  Gb  stm32l1xx_it.o [1]
+Packet_frame            0x2000'0114    0x8  Data  Gb  Protocol.o [1]
+PendSV_Handler           0x800'088d    0x2  Code  Gb  stm32l1xx_it.o [1]
+Protocol_Init            0x800'06ad    0x6  Code  Gb  Protocol.o [1]
+Protocol_frame_counter  0x2000'011c    0x1  Data  Gb  Protocol.o [1]
+Protocol_send_packet     0x800'06b3   0x72  Code  Gb  Protocol.o [1]
+RX_buffer               0x2000'0014  0x100  Data  Gb  Uart.o [1]
+RX_flag                 0x2000'0004    0x1  Data  Gb  Uart.o [1]
+RX_ringbuffer           0x2000'0008    0xc  Data  Gb  Uart.o [1]
+Region$$Table$$Base      0x800'08b8          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'08dc          --   Gb  - Linker created -
+SVC_Handler              0x800'0889    0x2  Code  Gb  stm32l1xx_it.o [1]
+SysTick_Handler          0x800'088f    0x2  Code  Gb  stm32l1xx_it.o [1]
+SystemCoreClock         0x2000'0000    0x4  Data  Gb  system_stm32l1xx.o [1]
+SystemInit               0x800'07c9   0x3e  Code  Gb  system_stm32l1xx.o [1]
+Timer_Init               0x800'0625   0x88  Code  Gb  Timer.o [1]
+UART_Enable_TX_DMA       0x800'0321   0x52  Code  Gb  Uart.o [1]
+UART_Init                0x800'022d   0xf4  Code  Gb  Uart.o [1]
+UART_Send_Buffer_DMA     0x800'0373   0x1e  Code  Gb  Uart.o [1]
+USART2_IRQHandler        0x800'0391   0x2e  Code  Gb  Uart.o [1]
+UsageFault_Handler       0x800'0887    0x2  Code  Gb  stm32l1xx_it.o [1]
+Write_ring_buffer_byte   0x800'03f9   0x1c  Code  Gb  ring_buffer.o [1]
+__cmain                  0x800'08dd         Code  Gb  cmain.o [4]
+__exit                   0x800'090d         Code  Gb  XXexit.o [4]
+__iar_copy_init3         0x800'0853   0x2c  Code  Gb  copy_init3.o [4]
+__iar_data_init3         0x800'0891   0x28  Code  Gb  data_init.o [4]
+__iar_program_start      0x800'0929         Code  Gb  cstartup_M.o [4]
+__iar_zero_init3         0x800'0819   0x3a  Code  Gb  zero_init3.o [4]
+__vector_table           0x800'0000         Data  Gb  startup_stm32l152xe.o [1]
+_call_main               0x800'08e9         Code  Gb  cmain.o [4]
+_exit                    0x800'0901         Code  Gb  cexit.o [4]
+_main                    0x800'08f7         Code  Gb  cmain.o [4]
+clk_HSE                  0x800'0521   0xbc  Code  Gb  clk.o [1]
+exit                     0x800'08fb    0x4  Code  Gb  exit.o [2]
+main                     0x800'0729   0x20  Code  Gb  main.o [1]
+
+
+[1] = D:\MSC_local\DSP\Assignment3\PROJ\Release\Obj
+[2] = dl7M_tln.a
+[3] = m7M_tl.a
+[4] = rt7M_tl.a
+
+  2 532 bytes of readonly  code memory
+     48 bytes of readonly  data memory
+  4 381 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

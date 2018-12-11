@@ -75,6 +75,7 @@ class UI:
             (self.chunksize*1,   str(self.chunksize*1/self.fs))
         ]
         ylabels = [
+            (0, str(0)),
             (self.vmax*0.2, str(self.vmax*0.2)),
             (self.vmax*0.4, str(self.vmax*0.4)),
             (self.vmax*0.6, str(self.vmax*0.6)),
