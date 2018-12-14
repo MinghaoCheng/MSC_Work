@@ -1,6 +1,3 @@
-import numpy as np
-
-
 # implementation of direct form II bioquad filter
 class IIR2Filter:
     def __init__(self, coefficients):
@@ -24,9 +21,6 @@ class IIR2Filter:
         self.__buffer0 = input_sum
 
         return output_sum
-    
-
-
 
 class IIRFilter:
     def __init__(self, sos_input):
