@@ -34,7 +34,7 @@ x = [reference x];
 % transmission
 filename = "QPSK_SIGNAL_TX.wav";
 FS = 8000;
-%audiowrite(filename,x,FS);
+audiowrite(filename,x,FS);
 % demodulate
 demodulated_bit_stream = IQ_Demodulate(x,fc,syncword,samples_per_symbol);
 demodulated_imag = reshape(demodulated_bit_stream,[8,8]);
