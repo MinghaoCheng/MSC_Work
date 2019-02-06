@@ -28,7 +28,7 @@ def main():
     plt.scatter(snr, ber_qam_256)
     plt.plot(snr, ber_qam_256, label = '256QAM')
 
-    plt.xlabel('SNR db')
+    plt.xlabel('SNR dB')
     plt.ylabel('BER percentage')
     plt.title('SNR vs BER')
     plt.legend()

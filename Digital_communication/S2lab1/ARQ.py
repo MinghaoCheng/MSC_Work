@@ -24,6 +24,7 @@ def main():
     tx_im = Image.open("DC4_150x100.pgm")
     tx_bin = np.unpackbits(np.array(tx_im))
     modulator = komm.QAModulation(4, base_amplitudes = 1/np.sqrt(2))
+    # modulator = komm.PSKModulation(2)
     
     snr = 4
     awgn = komm.AWGNChannel(snr=10**(snr/10.))
@@ -42,7 +43,7 @@ def main():
 
         rx_data = awgn(tx_data)
         rx_byte = modulator.demodulate(rx_data)
-
+        
         while(parity.parity_cal(rx_byte[0:7]) != rx_byte[7]):
             # parity check fail, need resend
             rx_data = awgn(tx_data)
