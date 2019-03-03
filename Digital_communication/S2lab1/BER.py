@@ -22,7 +22,7 @@ def main():
     # theoraticall curve
     BER_theoratical = 1/2 * scipy.special.erfc(np.sqrt(10**(SNR/10)/modulation.bits_per_symbol))
     plt.plot(SNR, BER_theoratical, label = 'theoratical')
-
+    
     plt.title('SNR vs BER')
     plt.yscale('log')
     plt.legend()

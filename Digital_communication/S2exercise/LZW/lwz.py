@@ -1,6 +1,6 @@
 class lwz_encoder:
     def __init__(self):
-        self.dict = ["&","a"]
+        self.dict = [" ","a"]
         for i in range (1,26):
             self.dict.append(chr(ord(self.dict[i]) + 1))
     
@@ -11,7 +11,7 @@ class lwz_encoder:
         result = []
         size = len(sequence)
         i = 0
-        while (i < size):
+        while (i < size-1):
             current_symb = sequence[i]
             next_symb = sequence[i+1]
             while (current_symb + next_symb in self.dict):

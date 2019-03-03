@@ -2,7 +2,7 @@ import lwz
 
 def main():
     LWZ_encoder = lwz.lwz_encoder()
-    seq = "tobeornottobeortobeornot"
+    seq = "she sells sea shells on the sea shore the shells she sells are sear shells im sure and if she sells sea shells on the sea shore then im sure she sells seashore shells"
 
     result = LWZ_encoder.encode(seq)
 
