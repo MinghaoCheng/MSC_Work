@@ -42,12 +42,14 @@ def main():
     p.join()
     plt.plot(SNR, BER, label = '(0o7,0o5) ccode with soft decision')
     plt.legend()
+    plt.xlabel("SNR")
+    plt.ylabel("BER")
 
     plt.figure()
     plt.yscale('log')
     plt.title("Comparison among different Ccode with soft decision")
     plt.plot(SNR, BER, label = '(0o7,0o5) ccode')
-    # (0o155,0o117) decision simulation
+    # (0o155,0o117) simulation
     decision_method = "soft"
     code = komm.ConvolutionalCode(feedforward_polynomials=[[0o155, 0o117]])
     BER = []
@@ -61,7 +63,7 @@ def main():
     p.join()
     plt.plot(SNR, BER, label = '(0o155,0o117) ccode')
 
-    # (0o155,0o117,0o127) decision simulation
+    # (0o155,0o117,0o127) simulation
     decision_method = "soft"
     code = komm.ConvolutionalCode(feedforward_polynomials=[[0o155, 0o117, 0o127]])
     BER = []
@@ -74,7 +76,8 @@ def main():
     p.close()
     p.join()
     plt.plot(SNR, BER, label = '(0o155,0o117,0o127) ccode')
-
+    plt.xlabel("SNR")
+    plt.ylabel("BER")
     plt.legend()
     plt.show()
 

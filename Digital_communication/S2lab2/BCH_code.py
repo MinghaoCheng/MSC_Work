@@ -62,9 +62,11 @@ def main():
     P.close()
     P.join()
     
+    plt.xlabel("SNR")
+    plt.ylabel("BER")
     plt.yscale('log')
     plt.legend()
-    plt.title("Comparison among different BCH code")
+    plt.title("Comparison among different BCH codes")
     plt.show()
 
 
